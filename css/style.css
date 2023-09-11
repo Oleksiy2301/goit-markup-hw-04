@@ -103,12 +103,25 @@ body {
     font-weight: 500;
     line-height: 1.5; /* 150% */
     letter-spacing: 0.02em;
-    color: #2E2F42;
+    color: #404bbf;
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
     position: relative;
-    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.menu-link::before {
+    content:"";
+}
+.menu-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
 }
 
 .menu-link:hover,
@@ -132,7 +145,7 @@ body {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
-    transition: color 250ms ease-out;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
